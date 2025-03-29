@@ -26,3 +26,10 @@ Creating a styles.css file
 Creating a file with styles to improve the appearance of the page.
 Writing the code to the styles.css file (available here in Github in file - styles.css)
 This code: aligns the content to the centre of the screen, adds a beautiful shadow and rounded corners, gives style to the input field and text, a gradient background (purple transition), a translucent container with a blur effect, an animated input field, beautiful styles for weak, medium and strong passwords.
+
+Step 6:
+Adding a script.js file
+Writing a code that will analyse the password and display its strength.
+Code: monitors the password entry, checks the length and the presence of numbers and letters of different cases and characters, displays a message (Too short, Weak, Medium, Strong), and changes the colour of the block depending on the strength of the password. (available here in Github in file - script.js)
+
+
