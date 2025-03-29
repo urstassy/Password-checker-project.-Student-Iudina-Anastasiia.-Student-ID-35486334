@@ -20,3 +20,9 @@ Step 4:
 Creating a web interface
 We are creating a simple web page where the user can enter a password and get an assessment of its strength.
 Writing the code to a file index.html (available here in Github in file - index.html)
+
+Step 5:
+Creating a styles.css file
+Creating a file with styles to improve the appearance of the page.
+Writing the code to the styles.css file (available here in Github in file - styles.css)
+This code: aligns the content to the centre of the screen, adds a beautiful shadow and rounded corners, gives style to the input field and text, a gradient background (purple transition), a translucent container with a blur effect, an animated input field, beautiful styles for weak, medium and strong passwords.
