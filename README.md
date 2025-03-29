@@ -3,6 +3,7 @@ A description of my project, a file with each code, and a link to the video
 
 
 Steps of my Cloud project:
+
 1 step: Create a password-checker folder and navigate to it
  
 2 step: Create: index.html – the main page of the website; styles.css – styles for the design; script.js – the logic of password verification; server.js – server on Node.js; public/ - a folder for static files; src/ - a folder for future server files.
