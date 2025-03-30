@@ -2,16 +2,68 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            width: 100%;
+            font-size: 1em;
+        }
+        #result {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .weak { color: red; }
+        .medium { color: orange; }
+        .strong { color: green; }
+        #tips {
+            margin-top: 15px;
+            font-size: 0.95em;
+            color: #555;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h2>Password Strength Checker</h2>
-        <input type="password" id="password" placeholder="Enter your password">
-        <p id="strength-message"></p>
-    </div>
-    <script src="script.js"></script>
+    <h1>Password Strength Checker</h1>
+    <input type="password" id="password" placeholder="Enter your password">
+    <p id="result"></p>
+    <div id="tips"></div>
+
+    <script>
+        const passwordInput = document.getElementById('password');
+        const result = document.getElementById('result');
+        const tips = document.getElementById('tips');
+
+        passwordInput.addEventListener('input', function () {
+            const val = passwordInput.value;
+            let score = 0;
+            tips.innerHTML = '';
+
+            if (val.length >= 8) score++;
+            if (/[A-Z]/.test(val)) score++;
+            if (/\d/.test(val)) score++;
+            if (/\W/.test(val)) score++;
+
+            if (score <= 1) {
+                result.textContent = "Strength: Weak";
+                result.className = "weak";
+                tips.innerHTML = "Use at least 8 characters, add numbers, uppercase letters, and symbols.";
+            } else if (score === 2 || score === 3) {
+                result.textContent = "Strength: Medium";
+                result.className = "medium";
+                tips.innerHTML = "Try adding more variety: uppercase letters, numbers, and symbols.";
+            } else {
+                result.textContent = "Strength: Strong";
+                result.className = "strong";
+            }
+        });
+    </script>
 </body>
 </html>
