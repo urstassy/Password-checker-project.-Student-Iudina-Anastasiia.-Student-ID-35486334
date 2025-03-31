@@ -5,18 +5,25 @@
     <title>Password Strength Checker</title>
     <style>
         body {
-            font-family: sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        h1, h2 {
             text-align: center;
+            color: #2c3e50;
         }
         input {
             padding: 10px;
             width: 100%;
             font-size: 1em;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         #result {
-            margin-top: 20px;
             font-weight: bold;
             font-size: 1.2em;
         }
@@ -24,17 +31,69 @@
         .medium { color: orange; }
         .strong { color: green; }
         #tips {
-            margin-top: 15px;
-            font-size: 0.95em;
+            margin-top: 10px;
             color: #555;
+            font-size: 0.95em;
+        }
+        .section {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 30px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #888;
         }
     </style>
 </head>
 <body>
+
     <h1>Password Strength Checker</h1>
-    <input type="password" id="password" placeholder="Enter your password">
-    <p id="result"></p>
-    <div id="tips"></div>
+
+    <div class="section">
+        <input type="password" id="password" placeholder="Enter your password">
+        <p id="result"></p>
+        <div id="tips"></div>
+    </div>
+
+    <div class="section">
+        <h2>What My Website Offers</h2>
+        <ul>
+            <li><strong>Password Strength Check:</strong> Find out if your password is weak, medium, or strong.</li>
+            <li><strong>Instant Feedback:</strong> Get quick results as you type.</li>
+            <li><strong>Helpful Tips:</strong> Learn how to make your password stronger.</li>
+            <li><strong>Simple and Easy to Use:</strong> No tech skills needed!</li>
+            <li><strong>Privacy and Security:</strong> Your password is never stored or saved.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Why I Created This Project</h2>
+        <p>
+            Many people use weak passwords without knowing the risks. Hackers can easily guess simple passwords, which can lead to stolen accounts and data loss. I created this tool to help users build stronger passwords and stay safe online.
+        </p>
+        <p>
+            Unlike other password checkers, this website is free and does not save any passwords. It is a useful tool for individuals, students, and businesses looking to protect their online accounts.
+        </p>
+        <p>
+            In today's world, online security is more important than ever. This project helps people understand password safety and improve their security practices.
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>License</h2>
+        <p>
+            This project is licensed under the <strong>MIT License</strong>. It allows anyone to use, modify, and share the code freely. This encourages collaboration and helps the project grow over time.
+        </p>
+    </div>
+
+    <footer>
+        &copy; 2025 Password Strength Checker. MIT License. No data is stored.
+    </footer>
 
     <script>
         const passwordInput = document.getElementById('password');
@@ -62,8 +121,10 @@
             } else {
                 result.textContent = "Strength: Strong";
                 result.className = "strong";
+                tips.innerHTML = "";
             }
         });
     </script>
+
 </body>
 </html>
